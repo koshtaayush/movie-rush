@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Insert title here</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color:#D3D3D3">
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">MovieRush</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <!--<li><a href="#">Page 1</a></li>
+            <li><a href="#">Page 2</a></li>
+            <li><a href="#">Page 3</a></li>-->
+        </ul>
+    </div>
+</nav>
+
+<div class="col-sm-4" style="padding-left:50px">
+    <img ng-src = "{{details.Poster}}">
+</div>
+<div class="col-sm-8">
+    <b>{{details.Title}}</b>, {{details.Year}}<br>
+    <strong>Released on:</strong>{{details.Released}}<br>
+    <span class="label label-primary">Plot</span>
+    {{details.Plot}}<br>
+    <span class="label label-primary">Director</span>
+    {{details.Director}}<br>
+    <span class="label label-primary">Actors</span>
+    {{details.Actors}}<br>
+    <span class="label label-success">Awards</span>
+    {{details.Awards}}<br><br>
+    <strong>IMDB Details:</strong><br>
+    <span class="label label-default">IMDB id</span> {{details.imdbID}}<br>
+    <span class="label label-default">IMDB Rating</span>
+    {{details.imdbRating}} <br>
+    <span class="label label-default">IMDB Votes</span>
+    {{details.imdbVotes}}<br><br>
+
+    <strong>Rotten Tomatoes Details:</strong><br>
+    <span class="label label-danger">Tomato Meter</span>
+    {{details.tomatoMeter}}<br>
+    <span class="label label-danger">Tomato Rating</span>
+    {{details.tomatoRating}}<br>
+    <span class="label label-danger">Tomato Fresh</span>
+    {{details.tomatoFresh}}<br>
+    <span class="label label-danger">Tomato Rotten</span>
+    {{details.tomatoRotten}}<br>
+    <span class="label label-danger">Tomato Consensus</span>
+    {{details.tomatoConsensus}}
+
+    <br><br>
+    <a type="button" href="https://www.youtube.com/results?search_query={{details.Title}} official trailer" class="btn btn-info btn-sm" >Watch trailer</a>
+        |
+    <a type="button" href="http://amazon.com" class="btn btn-info btn-sm">Shop Movie</a>
+        |
+    <a type="button" href="https://isubtitles.net/search?kwd={{details.Title}}" class="btn btn-info btn-sm">Get Subtitles</a>
+
+
+
+
+
+
+</div>
+
+</body>
+</html>
